@@ -37,12 +37,11 @@ describe('Document', () => {
     (typeof docObject.updated).should.equal('undefined')
   })
 
-  it('resurrects a Document instance from JSON', () => {
+  it('resurrects Document from JSON (pretty)', () => {
     const
-      template = document(),
-      doc = new Document(template),
-      docJSON = JSON.stringify(doc),
-      newDoc = new Document(JSON.parse(docJSON))
+      doc = new Document(document()),
+      docJSON = doc.serializeJSON({ pretty: true}),
+      newDoc = Document.fromJSON(docJSON)
 
     /** equal as 'live' object */
     doc.should.deep.equal(newDoc)
@@ -50,6 +49,16 @@ describe('Document', () => {
     /** equal as plain Object instance */
     Assert.isInstance(doc.toObject(), 'Object').should.equal(true)
     Assert.isInstance(newDoc.toObject(), 'Object').should.equal(true)
+    doc.toObject().should.deep.equal(newDoc.toObject())
+  })
+
+  it('resurrects Document from JSON (ugly)', () => {
+    const
+      doc = new Document(document()),
+      docJSON = doc.serializeJSON(),
+      newDoc = Document.fromJSON(docJSON)
+
+    doc.should.deep.equal(newDoc)
     doc.toObject().should.deep.equal(newDoc.toObject())
   })
 })

@@ -6,7 +6,7 @@
   "scripts": {
     "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
     "clean": "rimraf dist",
-    "dist": "npm run lint && npm run clean && npm run babel",
+    "dist": "npm run lint && npm run clean && npm run babel && npm run metapak",
     "lint": "eslint src/. --config .eslintrc.js",
     "metapak": "metapak",
     "test": "cross-env NODE_ENV=test mocha -r test/helper --reporter=nyan --recursive test",

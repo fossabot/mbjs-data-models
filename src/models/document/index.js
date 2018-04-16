@@ -1,6 +1,6 @@
 import SchemaObject from 'schema-object'
 
-import { Constructor, computed, methods } from '../base-model'
+import { constructors, computed, methods } from '../base-model'
 import { fromIngestedMediaFile } from './converters'
 
 import TimeUtil from '../../utils/time'
@@ -138,14 +138,14 @@ const schema = {
   updated: { type: String }
 }
 
+const docConstructors = constructors
+docConstructors.fromIngestedMediaFile = fromIngestedMediaFile
+
 const config = {
   strict: false,
   methods,
   computed,
-  constructors: {
-    default: Constructor,
-    fromIngestedMediaFile
-  }
+  constructors: docConstructors
 }
 
 const Document = new SchemaObject(schema, config)

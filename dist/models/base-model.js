@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.computed = exports.methods = exports.Constructor = exports.BaseSchema = undefined;
+exports.constructors = exports.computed = exports.methods = exports.Constructor = exports.BaseSchema = undefined;
 
 var _schemaObject = require('schema-object');
 
@@ -52,6 +52,10 @@ const Constructor = function (data = {}) {
 };
 
 const methods = {
+  serializeJSON(opts) {
+    if (opts.pretty) return JSON.stringify(this.toObject(), null, ' ');
+    return JSON.stringify(this.toObject());
+  },
   touch() {
     this.updated = _luxon.DateTime.local().toISO();
   }
@@ -61,6 +65,13 @@ const computed = {
   /** General alias for different IDs */
   id: function () {
     return this.uuid || this._id;
+  }
+};
+
+const constructors = {
+  default: Constructor,
+  fromJSON: function (data) {
+    this.super(JSON.parse(data));
   }
 };
 
@@ -74,13 +85,12 @@ const BaseSchema = {
 const BaseModel = new _schemaObject2.default(BaseSchema, {
   methods,
   computed,
-  constructors: {
-    default: Constructor
-  }
+  constructors
 });
 
 exports.BaseSchema = BaseSchema;
 exports.Constructor = Constructor;
 exports.methods = methods;
 exports.computed = computed;
+exports.constructors = constructors;
 exports.default = BaseModel;

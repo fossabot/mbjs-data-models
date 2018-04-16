@@ -155,14 +155,14 @@ const schema = {
   updated: { type: String }
 };
 
+const docConstructors = _baseModel.constructors;
+docConstructors.fromIngestedMediaFile = _converters.fromIngestedMediaFile;
+
 const config = {
   strict: false,
   methods: _baseModel.methods,
   computed: _baseModel.computed,
-  constructors: {
-    default: _baseModel.Constructor,
-    fromIngestedMediaFile: _converters.fromIngestedMediaFile
-  }
+  constructors: docConstructors
 };
 
 const Document = new _schemaObject2.default(schema, config);

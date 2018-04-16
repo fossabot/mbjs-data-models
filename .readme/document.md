@@ -24,12 +24,15 @@ Otherwise pass the properties, [as listed below](https://github.com/motionbank-j
 
 #### toJSON
 
-Outputs the model as JSON text (optional: pretty printing).
+Outputs the model as JSON text (with optional pretty printing).
 
 ```javascript
 const
   doc = new Document(),
-  textdata = doc.toJSON({ pretty: true })
+  // compact JSON
+  compact = doc.serializeJSON(),
+  // pretty JSON
+  pretty = doc.serializeJSON({ pretty: true })
 ```
 
 #### fromJSON

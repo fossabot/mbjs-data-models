@@ -38,6 +38,10 @@ const Constructor = function (data = {}) {
 }
 
 const methods = {
+  serializeJSON (opts) {
+    if (opts.pretty) return JSON.stringify(this.toObject(), null, ' ')
+    return JSON.stringify(this.toObject())
+  },
   touch () {
     this.updated = DateTime.local().toISO()
   }
@@ -47,6 +51,13 @@ const computed = {
   /** General alias for different IDs */
   id: function () {
     return this.uuid || this._id
+  }
+}
+
+const constructors = {
+  default: Constructor,
+  fromJSON: function (data) {
+    this.super(JSON.parse(data))
   }
 }
 
@@ -62,9 +73,7 @@ const BaseModel = new SchemaObject(
   {
     methods,
     computed,
-    constructors: {
-      default: Constructor
-    }
+    constructors
   }
 )
 
@@ -72,7 +81,8 @@ export {
   BaseSchema,
   Constructor,
   methods,
-  computed
+  computed,
+  constructors
 }
 
 export default BaseModel
