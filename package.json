@@ -1,6 +1,6 @@
 {
   "name": "motionbank-data-models",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Data model library for Motion Bank",
   "main": "dist/index.js",
   "scripts": {
@@ -23,10 +23,10 @@
       "travis"
     ],
     "codacy": {
-      "hash": ""
+      "hash": "caea2d3c263b447f83818c6ed4ca3609"
     },
     "codeclimate": {
-      "hash": ""
+      "hash": "844037436b98a1e19e71"
     }
   },
   "repository": {
