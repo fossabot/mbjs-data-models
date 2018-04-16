@@ -11,7 +11,7 @@
 [![Dependency Status](https://tidelift.com/badges/github/motionbank-js/motionbank-data-models)](https://tidelift.com/repo/github/motionbank-js/motionbank-data-models)
 
 
-## Install :monocle:
+## Install :floppy_disk:
 
 First you install...
 
