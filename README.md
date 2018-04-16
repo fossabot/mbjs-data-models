@@ -6,10 +6,41 @@
 
 [![NPM version](https://badge.fury.io/js/motionbank-data-models.svg)](https://npmjs.org/package/motionbank-data-models)
 [![Build status](https://secure.travis-ci.org/motionbank-js/motionbank-data-models.svg)](https://travis-ci.org/motionbank-js/motionbank-data-models)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/)](https://www.codacy.com/app/motionbank-js/motionbank-data-models)
-[![Maintainability](https://api.codeclimate.com/v1/badges//maintainability)](https://codeclimate.com/github/motionbank-js/motionbank-data-models)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/caea2d3c263b447f83818c6ed4ca3609)](https://www.codacy.com/app/motionbank-js/motionbank-data-models)
+[![Maintainability](https://api.codeclimate.com/v1/badges/844037436b98a1e19e71/maintainability)](https://codeclimate.com/github/motionbank-js/motionbank-data-models)
 [![Dependency Status](https://tidelift.com/badges/github/motionbank-js/motionbank-data-models)](https://tidelift.com/repo/github/motionbank-js/motionbank-data-models)
 
+
+## Install :monocle:
+
+First you install...
+
+```shell
+npm i --save motionbank-data-models
+```
+
+... then you include ...
+
+```javascript
+const models = require('motionbank-data-models')
+```
+
+... then you get the :neckbeard:.
+```javascript
+const doc = new Document({
+  /* ... check the tests for the exact schema ... */
+})
+```
+
+## Develop :fire:
+
+Watch your changes while working with `npm run watch`.
+And don't forget to always `npm run lint` and `npm test`
+before you commit.
+
+## Build :dizzy:
+
+Make a clean and fresh production build with `npm run dist`, and get ready to :bomb:.
 
 
 ## License

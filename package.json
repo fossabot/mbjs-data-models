@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
-    "watch": "cross-env NODE_ENV=production babel --watch --copy-files src --out-dir dist",
     "clean": "rimraf dist",
     "dist": "npm run lint && npm run clean && npm run babel",
     "lint": "eslint src/. --config .eslintrc.js",
     "metapak": "metapak",
-    "test": "cross-env NODE_ENV=test mocha -r test/helper --reporter=nyan --recursive test"
+    "test": "cross-env NODE_ENV=test mocha -r test/helper --reporter=nyan --recursive test",
+    "watch": "cross-env NODE_ENV=production babel --watch --copy-files src --out-dir dist"
   },
   "metapak": {
     "configs": [
