@@ -1,4 +1,4 @@
-## Install :monocle:
+## Install :floppy_disk:
 
 First you install...
 
