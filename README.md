@@ -26,11 +26,22 @@ const models = require('motionbank-data-models')
 ```
 
 ... then you get the :neckbeard:.
+
+### Document
+
+Used to store metadata about file-based
+resources (e.g. audio, video, textfiles, etc.).
+
 ```javascript
-const doc = new Document({
-  /* ... check the tests for the exact schema ... */
-})
+const
+  { Document } = models,
+  doc = new Document({
+    /* ... check the tests for the exact schema ... */
+  })
 ```
+
+[Check out this file](https://github.com/motionbank-js/motionbank-data-models/blob/master/.readme/document.md)
+for more info on Documents.
 
 ## Develop :fire:
 
