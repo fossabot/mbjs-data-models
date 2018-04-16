@@ -1,0 +1,73 @@
+{
+  "name": "motionbank-data-models",
+  "version": "0.0.0",
+  "description": "Data model library for Motion Bank",
+  "main": "dist/index.js",
+  "scripts": {
+    "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
+    "watch": "cross-env NODE_ENV=production babel --watch --copy-files src --out-dir dist",
+    "clean": "rimraf dist",
+    "dist": "npm run lint && npm run clean && npm run babel",
+    "lint": "eslint src/. --config .eslintrc.js",
+    "metapak": "metapak",
+    "test": "cross-env NODE_ENV=test mocha -r test/helper --reporter=nyan --recursive test"
+  },
+  "metapak": {
+    "configs": [
+      "babel",
+      "eslint",
+      "readme",
+      "codeclimate",
+      "codacy",
+      "tidelift",
+      "travis"
+    ],
+    "codacy": {
+      "hash": ""
+    },
+    "codeclimate": {
+      "hash": ""
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motionbank-js/motionbank-data-models.git"
+  },
+  "author": "Mainz University of Applied Sciences (Motion Bank Project)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/motionbank-js/motionbank-data-models/issues"
+  },
+  "homepage": "https://github.com/motionbank-js/motionbank-data-models#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "chance": "^1.0.13",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "metapak": "^1.0.3",
+    "metapak-motionbank": "^1.9.2",
+    "mocha": "^5.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bluebird": "^3.5.1",
+    "cross-env": "^5.1.4",
+    "deep-extend": "^0.5.0",
+    "luxon": "^1.0.0",
+    "schema-object": "^4.0.11",
+    "slug": "^0.9.1",
+    "uuid": "^3.2.1",
+    "validator": "^9.4.1"
+  }
+}
