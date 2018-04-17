@@ -11,15 +11,15 @@
 [![Dependency Status](https://tidelift.com/badges/github/motionbank-js/motionbank-data-models)](https://tidelift.com/repo/github/motionbank-js/motionbank-data-models)
 
 
-## Install :floppy_disk:
+## Install
 
-First you install...
+First you :floppy_disk: install...
 
 ```shell
 npm i --save motionbank-data-models
 ```
 
-... then you include ...
+... then you include :fire: ...
 
 ```javascript
 const models = require('motionbank-data-models')
@@ -27,14 +27,16 @@ const models = require('motionbank-data-models')
 
 ... then you get the :neckbeard:.
 
-## Documentation :pineapple:
+## Documentation
 
 What you might want to know about the Data Models...
-is most likely not yet here.
+is most likely *not yet here*.
 
-### Annotation :notebook:
+### Annotation
     
-Aims to conform to the [Web Annotation Model](https://www.w3.org/TR/annotation-model/) (one sweet, velvet morning).
+Aims to conform to the [Web Annotation Model](https://www.w3.org/TR/annotation-model/).
+
+**Spoiler alert**: It doesn't yet do that *at all*. But maybe one sweet, velvet morning...
 
 * The generated document UUID is a random 
 [version 4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random))
@@ -57,9 +59,9 @@ const anno = new Annotation({
 })
 ```
 
-### Document :file_folder:
+### Document
 
-Used to store metadata about file-based
+Used to store :file_folder: metadata about binary
 resources (e.g. audio, video, textfiles, etc.).
 
 * The generated document UUID is a
@@ -159,10 +161,10 @@ const doc = new Document({
 
 ### Convenience
 
-#### toJSON
+#### serializeJSON
 
-Serialises the current instance as JSON text data
-(with optional pretty printing :lipstick:, whee).
+Serializes the current instance as JSON text data :memo:
+(with optional :sparkles: pretty printing).
 
 ```javascript
 const
@@ -175,7 +177,7 @@ const
 
 #### fromJSON
 
-Resurrects a prior :skull: instance from strored JSON text data.
+Resurrects a prior :skull: instance from stored JSON text data.
 
 ```javascript
 const
@@ -183,15 +185,15 @@ const
   anno = Annotation.fromJSON(textdata)
 ```
 
-## Develop :fire:
+## Develop
 
-Watch your changes while working with `npm run watch`.
+Watch your changes while working :dizzy: with `npm run watch`.
 And don't forget to always `npm run lint` and `npm test`
 before you commit.
 
-## Build :dizzy:
+## Build
 
-Make a clean and fresh production build with `npm run dist`, and get ready to :bomb:.
+Make a clean and fresh production build with `npm run dist`, then get ready to :bomb:.
 
 
 ## License
