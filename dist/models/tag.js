@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.config = exports.schema = undefined;
 
 var _schemaObject = require('schema-object');
 
@@ -12,12 +13,12 @@ var _utils = require('../utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Schema = {
+const schema = {
   title: { type: String, required: true },
   value: { type: String }
 };
 
-const Config = {
+const config = {
   strict: false,
   computed: {
     slug() {
@@ -26,7 +27,8 @@ const Config = {
   }
 };
 
-const Tag = new _schemaObject2.default(Schema, Config);
+const Tag = new _schemaObject2.default(schema, config);
 
+exports.schema = schema;
+exports.config = config;
 exports.default = Tag;
-module.exports = exports['default'];

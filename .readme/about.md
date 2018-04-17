@@ -145,6 +145,28 @@ const doc = new Document({
 })
 ```
 
+### Tag
+    
+Just a simple tag.
+
+```javascript
+const
+  { Tag } = models,
+  tag = new Tag({
+    // see below for schema ...
+  })
+```
+
+#### Schema
+
+Here is a random example using all currently available properties.
+
+```javascript
+const tag = new Tag({
+  title: 'itsatag',
+  value: 'and here is some more optional content to it'
+})
+```
 
 ### Convenience
 

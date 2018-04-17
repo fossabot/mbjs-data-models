@@ -22,6 +22,10 @@ const tag = () => {
   }
 }
 
+const annotation = () => {
+
+}
+
 const document = () => {
   const tags = new Array(chance.integer({min: 2, max: 10})).fill(null)
   return {
@@ -86,6 +90,7 @@ const document = () => {
 }
 
 module.exports = {
+  annotation,
   document,
   tag,
   singleValues

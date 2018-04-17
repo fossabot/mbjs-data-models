@@ -1,12 +1,12 @@
 import SchemaObject from 'schema-object'
 import { ObjectUtil } from '../utils'
 
-const Schema = {
+const schema = {
   title: { type: String, required: true },
   value: { type: String }
 }
 
-const Config = {
+const config = {
   strict: false,
   computed: {
     slug () {
@@ -15,6 +15,10 @@ const Config = {
   }
 }
 
-const Tag = new SchemaObject(Schema, Config)
+const Tag = new SchemaObject(schema, config)
 
+export {
+  schema,
+  config
+}
 export default Tag
