@@ -1,4 +1,6 @@
 import SchemaObject from 'schema-object'
+
+import { constructors, computed, methods } from '../defaults'
 import { ObjectUtil } from '../utils'
 
 const schema = {
@@ -8,11 +10,13 @@ const schema = {
 
 const config = {
   strict: false,
-  computed: {
+  constructors,
+  methods,
+  computed: ObjectUtil.merge(computed, {
     slug () {
       return ObjectUtil.slug(this.title)
     }
-  }
+  })
 }
 
 const Tag = new SchemaObject(schema, config)

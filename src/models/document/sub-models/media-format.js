@@ -1,6 +1,8 @@
 import SchemaObject from 'schema-object'
 
-import Tag from '../../tag'
+import { schema } from '../../tag'
+
+const Tag = new SchemaObject(schema)
 
 /**
  * Media container format descriptor

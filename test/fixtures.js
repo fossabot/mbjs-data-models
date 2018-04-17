@@ -1,45 +1,95 @@
 const
   Chance = require('chance'),
-  chance = new Chance()
+  chance = new Chance(),
+  uuidv4 = require('uuid/v4')
 
 const
   { utils } = require('../dist'),
   { TimeUtil } = utils
 
 const singleValues = {
+  uuid () {
+    return uuidv4()
+  },
   bytesSize () {
     return chance.integer({
       min: Math.pow(10, 1),
       max: Math.pow(10, 10)
     })
+  },
+  word () {
+    return chance.word({ min: 3, max: 6 })
+  },
+  sentence () {
+    return chance.sentence({ words: chance.integer({ min: 3, max: 6 }) })
+  },
+  name () {
+    return chance.name()
+  },
+  url () {
+    return chance.url()
+  },
+  isoDateTime () {
+    return TimeUtil.toISO()
+  },
+  hash () {
+    return chance.hash()
   }
 }
 
 const tag = () => {
   return {
-    title: chance.word({syllables:3}),
-    value: chance.sentence({words:5})
+    title: singleValues.word(),
+    value: singleValues.sentence()
+  }
+}
+
+const map = () => {
+  return {
+    title: singleValues.sentence()
   }
 }
 
 const annotation = () => {
-
+  return {
+    author: singleValues.name(),
+    motivation: singleValues.word(),
+    context: singleValues.word(),
+    target: {
+      type: singleValues.word(),
+      id: singleValues.url()
+    },
+    body: {
+      type: singleValues.word(),
+      value: singleValues.sentence(),
+      source: {
+        id: singleValues.url(),
+        type: singleValues.word()
+      },
+      purpose: singleValues.word(),
+      selector: {
+        type: singleValues.word(),
+        value: singleValues.sentence(),
+        conformsTo: singleValues.word()
+      }
+    }
+  }
 }
 
 const document = () => {
   const tags = new Array(chance.integer({min: 2, max: 10})).fill(null)
   return {
-    author: chance.name(),
+    author: singleValues.name(),
     source: {
-      id: chance.url(),
+      id: singleValues.url(),
       type: 'Video'
     },
     file: {
-      added: TimeUtil.toISO(),
-      created: TimeUtil.toISO(),
-      updated: TimeUtil.toISO(),
+      added: singleValues.isoDateTime(),
+      created: singleValues.isoDateTime(),
+      updated: singleValues.isoDateTime(),
       bytes: singleValues.bytesSize(),
-      hash: chance.hash(),
+      hash: singleValues.hash(),
       mime: 'video/mp4',
       ext: 'mp4'
     },
@@ -57,10 +107,10 @@ const document = () => {
       },
       streams: [{
         codec: {
-          name: chance.word({syllables:2}),
-          longName: chance.sentence({words:4}),
-          tag: chance.hash(),
-          tagString: chance.word({syllables:3}),
+          name: singleValues.word(),
+          longName: singleValues.sentence(),
+          tag: singleValues.hash(),
+          tagString: singleValues.word(),
           timeBase: '1/2000',
           type: 'video',
           profile: 'main'
@@ -92,6 +142,7 @@ const document = () => {
 module.exports = {
   annotation,
   document,
+  map,
   tag,
   singleValues
 }

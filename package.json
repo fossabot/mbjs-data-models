@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "assert": "^1.4.1",
+    "bignumber.js": "^6.0.0",
     "bluebird": "^3.5.1",
     "cross-env": "^5.1.4",
     "deep-extend": "^0.5.0",
