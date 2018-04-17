@@ -8,7 +8,7 @@
 [![Build status](https://secure.travis-ci.org/motionbank-js/motionbank-data-models.svg)](https://travis-ci.org/motionbank-js/motionbank-data-models)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/caea2d3c263b447f83818c6ed4ca3609)](https://www.codacy.com/app/motionbank-js/motionbank-data-models)
 [![Maintainability](https://api.codeclimate.com/v1/badges/844037436b98a1e19e71/maintainability)](https://codeclimate.com/github/motionbank-js/motionbank-data-models)
-[![Dependency Status](https://tidelift.com/badges/github/motionbank-js/motionbank-data-models)](https://tidelift.com/repo/github/motionbank-js/motionbank-data-models)
+[![Dependency Status](https://tidelift.com/badges/github/motionbank-js/motionbank-data-models?style=flat)](https://tidelift.com/repo/github/motionbank-js/motionbank-data-models)
 
 
 ## Install
