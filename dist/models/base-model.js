@@ -52,7 +52,7 @@ const Constructor = function (data = {}) {
 };
 
 const methods = {
-  serializeJSON(opts) {
+  serializeJSON(opts = {}) {
     if (opts.pretty) return JSON.stringify(this.toObject(), null, ' ');
     return JSON.stringify(this.toObject());
   },

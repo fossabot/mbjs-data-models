@@ -7,7 +7,7 @@ matrix:
       node_js:
         - "9.11.1"
       script:
-        - npm run lint
+        - npm run dist
         - npm test
     # macOS 10.12
     - os: osx
@@ -15,5 +15,5 @@ matrix:
       node_js:
         - "9.11.1"
       script:
-        - npm run lint
+        - npm run dist
         - npm test
