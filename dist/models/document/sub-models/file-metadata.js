@@ -1,20 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _schemaObject = require('schema-object');
-
-var _schemaObject2 = _interopRequireDefault(_schemaObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const SchemaObject = require('schema-object');
 
 /**
  * General file metadata
  * @type {{new(values?: any): *}}
  */
-const FileMetadata = new _schemaObject2.default({
+const FileMetadata = new SchemaObject({
   added: { type: String },
   created: { type: String },
   updated: { type: String },
@@ -24,5 +16,4 @@ const FileMetadata = new _schemaObject2.default({
   ext: { type: String }
 });
 
-exports.default = FileMetadata;
-module.exports = exports['default'];
+module.exports = FileMetadata;

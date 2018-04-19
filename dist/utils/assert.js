@@ -1,14 +1,6 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _assert = require('assert');
-
-var _assert2 = _interopRequireDefault(_assert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const assert = require('assert');
 
 /**
  * Custom assert wrapper
@@ -23,7 +15,7 @@ class Assert {
    * @param {String} [msg] - Custom error msg
    */
   static ok(condition, msg = undefined) {
-    (0, _assert2.default)(condition === true, msg);
+    assert(condition === true, msg);
     return true;
   }
 
@@ -35,9 +27,9 @@ class Assert {
    * @param {Object} [opts] - e.g. { deep: true, strict: true, message: 'custom error msg' }
    */
   static equal(value, compare, opts = {}) {
-    let fn = opts.strict ? _assert2.default.strictEqual : _assert2.default.equal;
+    let fn = opts.strict ? assert.strictEqual : assert.equal;
     if (opts.deep) {
-      fn = opts.strict ? _assert2.default.deepStrictEqual : _assert2.default.deepEqual;
+      fn = opts.strict ? assert.deepStrictEqual : assert.deepEqual;
     }
     fn(value, compare, opts.message);
     return true;
@@ -51,9 +43,9 @@ class Assert {
    * @param {Object} [opts] - Optional: e.g. { deep: true, strict: true, message: 'custom error msg' }
    */
   static notEqual(value, compare, opts = {}) {
-    let fn = opts.strict ? _assert2.default.notStrictEqual : _assert2.default.notEqual;
+    let fn = opts.strict ? assert.notStrictEqual : assert.notEqual;
     if (opts.deep) {
-      fn = opts.strict ? _assert2.default.notDeepStrictEqual : _assert2.default.notDeepEqual;
+      fn = opts.strict ? assert.notDeepStrictEqual : assert.notDeepEqual;
     }
     fn(value, compare, opts.message);
     return true;
@@ -92,5 +84,4 @@ class Assert {
   }
 }
 
-exports.default = Assert;
-module.exports = exports['default'];
+module.exports = Assert;

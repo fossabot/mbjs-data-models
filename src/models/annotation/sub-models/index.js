@@ -1,8 +1,8 @@
-import Body from './body'
-import Selector from './selector'
-import Target from './target'
+const Body = require('./body')
+const Selector = require('./selector')
+const Target = require('./target')
 
-export {
+module.exports = {
   Body,
   Selector,
   Target

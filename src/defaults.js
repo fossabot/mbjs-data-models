@@ -1,7 +1,8 @@
-import isUUID from 'validator/lib/isUUID'
+const isUUID = require('validator/lib/isUUID')
 
-import ObjectUtil, { uuidNamespaces } from './utils/object'
-import TimeUtil from './utils/time'
+const ObjectUtil = require('./utils/object')
+const { uuidNamespaces } = require('./utils/object')
+const TimeUtil = require('./utils/time')
 
 /**
  * Default constructor
@@ -79,7 +80,7 @@ const computed = {
   }
 }
 
-export {
+module.exports = {
   methods,
   computed,
   constructors

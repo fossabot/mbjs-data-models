@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import MediaFormat from './media-format'
-import MediaStream from './media-stream'
+const MediaFormat = require('./media-format')
+const MediaStream = require('./media-stream')
 
 /**
  * Media content related metadata
@@ -12,4 +12,4 @@ const MediaMetadata = new SchemaObject({
   format: MediaFormat
 })
 
-export default MediaMetadata
+module.exports = MediaMetadata

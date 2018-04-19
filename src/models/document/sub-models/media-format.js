@@ -1,6 +1,6 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { schema } from '../../tag'
+const { schema } = require('../../tag')
 
 const Tag = new SchemaObject(schema)
 
@@ -20,4 +20,4 @@ const MediaFormat = new SchemaObject({
   startTime: { type: Number }
 })
 
-export default MediaFormat
+module.exports = MediaFormat

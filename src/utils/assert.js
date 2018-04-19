@@ -1,4 +1,4 @@
-import assert from 'assert'
+const assert = require('assert')
 
 /**
  * Custom assert wrapper
@@ -83,4 +83,4 @@ class Assert {
   }
 }
 
-export default Assert
+module.exports = Assert

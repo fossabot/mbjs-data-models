@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { constructors, computed, methods } from '../../defaults'
-import * as subModels from './sub-models'
+const { constructors, computed, methods } = require('../../defaults')
+const subModels = require('./sub-models')
 
 const schema = {
   /** Document ID & ownership **/
@@ -28,9 +28,6 @@ const config = {
 }
 
 const Annotation = new SchemaObject(schema, config)
+Annotation.schema = schema
 
-export {
-  schema,
-  config
-}
-export default Annotation
+module.exports = Annotation

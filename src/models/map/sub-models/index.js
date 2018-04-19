@@ -1,11 +1,11 @@
-import GridSelector from './grid-selector'
-import TimeSelector from './time-selector'
+const GridSelector = require('./grid-selector')
+const TimeSelector = require('./time-selector')
 
-import Plane from './plane'
-import Time from './time'
-import Timespan from './timespan'
+const Plane = require('./plane')
+const Time = require('./time')
+const Timespan = require('./timespan')
 
-export {
+module.exports = {
   GridSelector,
   TimeSelector,
   Plane,

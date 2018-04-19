@@ -1,8 +1,8 @@
-import Assert from './assert'
-import ObjectUtil from './object'
-import TimeUtil from './time'
+const Assert = require('./assert')
+const ObjectUtil = require('./object')
+const TimeUtil = require('./time')
 
-export {
+module.exports = {
   Assert,
   ObjectUtil,
   TimeUtil

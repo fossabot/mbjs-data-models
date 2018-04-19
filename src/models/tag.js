@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { constructors, computed, methods } from '../defaults'
-import { ObjectUtil } from '../utils'
+const { constructors, computed, methods } = require('../defaults')
+const { ObjectUtil } = require('../utils')
 
 const schema = {
   title: { type: String, required: true },
@@ -20,9 +20,6 @@ const config = {
 }
 
 const Tag = new SchemaObject(schema, config)
+Tag.schema = schema
 
-export {
-  schema,
-  config
-}
-export default Tag
+module.exports = Tag

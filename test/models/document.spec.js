@@ -2,7 +2,7 @@ const validator = require('validator')
 
 const
   { document } = require('../fixtures'),
-  { models, utils } = require('../../dist'),
+  { models, utils } = require('../../src'),
   { Document } = models,
   { TimeUtil, Assert } = utils
 
@@ -32,9 +32,9 @@ describe('Document', () => {
     if (!res) throw new Error('WTF: not equal!')
 
     res = (TimeUtil.fromISO(docObject.added).toISO() === docObject.added)
-    if (!res) throw new Error('WTF: not equal!')
+    if (!res) { throw new Error('WTF: not equal!') }
 
-    (typeof docObject.updated).should.equal('undefined')
+    (typeof docObject.updated === 'undefined').should.equal(true)
   })
 
   it('resurrects Document from JSON (pretty)', () => {

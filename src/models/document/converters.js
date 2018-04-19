@@ -1,8 +1,8 @@
-import path from 'path'
+const path = require('path')
 
-import Assert from '../../utils/assert'
-import ObjectUtil from '../../utils/object'
-import TimeUtil from '../../utils/time'
+const Assert = require('../../utils/assert')
+const ObjectUtil = require('../../utils/object')
+const TimeUtil = require('../../utils/time')
 
 const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
   Assert.isType(file, 'object', 'file object missing')
@@ -83,6 +83,6 @@ const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
   else return payload
 }
 
-export {
+module.exports = {
   fromIngestedMediaFile
 }

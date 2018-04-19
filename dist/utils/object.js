@@ -1,39 +1,16 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.uuidNamespaces = undefined;
+const slug = require('slug');
+const merge = require('deep-extend');
+const uuid4 = require('uuid/v4');
+const uuid5 = require('uuid/v5');
+const isUUID = require('validator/lib/isUUID');
 
-var _slug = require('slug');
-
-var _slug2 = _interopRequireDefault(_slug);
-
-var _deepExtend = require('deep-extend');
-
-var _deepExtend2 = _interopRequireDefault(_deepExtend);
-
-var _v = require('uuid/v4');
-
-var _v2 = _interopRequireDefault(_v);
-
-var _v3 = require('uuid/v5');
-
-var _v4 = _interopRequireDefault(_v3);
-
-var _isUUID = require('validator/lib/isUUID');
-
-var _isUUID2 = _interopRequireDefault(_isUUID);
-
-var _assert = require('./assert');
-
-var _assert2 = _interopRequireDefault(_assert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const Assert = require('./assert');
 
 const NULL = '00000000-0000-0000-0000-000000000000',
       MOTION_BANK = '71e9e787-b461-43d1-b70a-c7ec7191378c',
-      { URL, DNS } = _v4.default;
+      { URL, DNS } = uuid5;
 
 const uuidNamespaces = {
   URL, DNS, MOTION_BANK, NULL
@@ -46,11 +23,11 @@ class ObjectUtil {
    * @return {Object}
    */
   static merge(...args) {
-    _assert2.default.ok(args.length > 1, 'merge needs at least two arguments');
+    Assert.ok(args.length > 1, 'merge needs at least two arguments');
     args = args.map(arg => {
       return arg instanceof Object ? arg : {};
     });
-    return _deepExtend2.default.apply(null, args.filter(arg => {
+    return merge.apply(null, args.filter(arg => {
       return typeof arg !== 'undefined';
     }));
   }
@@ -61,8 +38,8 @@ class ObjectUtil {
    * @return {String}
    */
   static slug(value) {
-    _assert2.default.isType(value, 'string', 'value must be string');
-    return (0, _slug2.default)(value);
+    Assert.isType(value, 'string', 'value must be string');
+    return slug(value);
   }
 
   /**
@@ -72,9 +49,9 @@ class ObjectUtil {
    * @return {String}
    */
   static uuid5(value, namespace = undefined) {
-    _assert2.default.isType(value, 'string', 'value must be string');
-    if (namespace) _assert2.default.ok((0, _isUUID2.default)(namespace), 'namespace must be UUID');
-    return (0, _v4.default)(value || (0, _v2.default)(), namespace || uuidNamespaces.NULL);
+    Assert.isType(value, 'string', 'value must be string');
+    if (namespace) Assert.ok(isUUID(namespace), 'namespace must be UUID');
+    return uuid5(value || uuid4(), namespace || uuidNamespaces.NULL);
   }
 
   /**
@@ -82,9 +59,12 @@ class ObjectUtil {
    * @return {String}
    */
   static uuid4() {
-    return (0, _v2.default)();
+    return uuid4();
+  }
+
+  static get uuidNamespaces() {
+    return uuidNamespaces;
   }
 }
 
-exports.uuidNamespaces = uuidNamespaces;
-exports.default = ObjectUtil;
+module.exports = ObjectUtil;

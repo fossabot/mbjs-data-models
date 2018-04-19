@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import Timespan from './timespan'
-import { MAP_SELECTOR_TIMELINE } from '../../../constants'
+const Timespan = require('./timespan')
+const { MAP_SELECTOR_TIMELINE } = require('../../../constants')
 
 /**
  * Time Selector
@@ -12,4 +12,4 @@ const TimelineSelector = new SchemaObject({
   selection: { type: Timespan, required: true }
 })
 
-export default TimelineSelector
+module.exports = TimelineSelector

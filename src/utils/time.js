@@ -1,15 +1,4 @@
-import { DateTime } from 'luxon'
-
-const {
-  DATE_SHORT,
-  DATE_FULL,
-  TIME_24_SIMPLE,
-  TIME_24_WITH_SECONDS,
-  DATETIME_SHORT_WITH_SECONDS,
-  DATETIME_SHORT,
-  DATETIME_FULL_WITH_SECONDS,
-  DATETIME_FULL
-} = DateTime
+const { DateTime } = require('luxon')
 
 class TimeUtil {
   static toDateTime (value) {
@@ -42,27 +31,9 @@ class TimeUtil {
     return TimeUtil.toDateTime(value).toMillis()
   }
 
-  static toFormat (value, format) {
-    return TimeUtil.toDateTime(value).toFormat(format)
-  }
-
   static fromISO (value) {
     return DateTime.fromISO(value)
   }
 }
 
-const formats = {
-  DATE_SHORT,
-  DATE_FULL,
-  TIME_24_SIMPLE,
-  TIME_24_WITH_SECONDS,
-  DATETIME_SHORT_WITH_SECONDS,
-  DATETIME_SHORT,
-  DATETIME_FULL_WITH_SECONDS,
-  DATETIME_FULL
-}
-
-export {
-  formats
-}
-export default TimeUtil
+module.exports = TimeUtil

@@ -1,7 +1,8 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { Source } from '../../internal'
-import Selector from './selector'
+const
+  { Source } = require('../../internal'),
+  Selector = require('./selector')
 
 const Body = new SchemaObject({
   type: { type: String, required: true },
@@ -11,4 +12,4 @@ const Body = new SchemaObject({
   selector: { type: Selector }
 })
 
-export default Body
+module.exports = Body

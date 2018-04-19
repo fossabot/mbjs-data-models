@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 /**
  * Content source identifier
@@ -9,4 +9,4 @@ const Source = new SchemaObject({
   type: { type: String, required: true }
 })
 
-export default Source
+module.exports = Source

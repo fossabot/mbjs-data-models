@@ -2,7 +2,7 @@ const validator = require('validator')
 
 const
   { map } = require('../fixtures'),
-  { models } = require('../../dist'),
+  { models } = require('../../src'),
   { Map } = models
 
 describe('Map', () => {

@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import MediaDimensions from './media-dimensions'
-import MediaCodec from './media-codec'
+const MediaDimensions = require('./media-dimensions')
+const MediaCodec = require('./media-codec')
 
 /**
  * Media stream descriptor
@@ -22,4 +22,4 @@ const MediaStream = new SchemaObject({
   startTime: { type: Number }
 })
 
-export default MediaStream
+module.exports = MediaStream

@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 /**
  * Media dimensionality
@@ -14,4 +14,4 @@ const MediaDimensions = new SchemaObject({
   pixelFormat: { type: String }
 })
 
-export default MediaDimensions
+module.exports = MediaDimensions

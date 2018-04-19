@@ -1,9 +1,9 @@
-import Annotation from './annotation'
-import Document from './document'
-import Map from './map'
-import Tag from './tag'
+const Annotation = require('./annotation')
+const Document = require('./document')
+const Map = require('./map')
+const Tag = require('./tag')
 
-export {
+module.exports = {
   Annotation,
   Document,
   Map,

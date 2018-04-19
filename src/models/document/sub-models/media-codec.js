@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 /**
  * Media codec descriptor
@@ -16,4 +16,4 @@ const MediaCodec = new SchemaObject({
   profile: { type: String }
 })
 
-export default MediaCodec
+module.exports = MediaCodec

@@ -1,6 +1,6 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import Selector from './selector'
+const Selector = require('./selector')
 
 const Target = new SchemaObject({
   type: { type: String, required: true },
@@ -8,4 +8,4 @@ const Target = new SchemaObject({
   selector: { type: Selector }
 })
 
-export default Target
+module.exports = Target

@@ -4,7 +4,7 @@ const
   uuidv4 = require('uuid/v4')
 
 const
-  { utils } = require('../dist'),
+  { utils } = require('../src'),
   { TimeUtil } = utils
 
 const singleValues = {

@@ -1,11 +1,11 @@
-import FileMetadata from './file-metadata'
-import MediaDimensions from './media-dimensions'
-import MediaCodec from './media-codec'
-import MediaFormat from './media-format'
-import MediaStream from './media-stream'
-import MediaMetadata from './media-metadata'
+const FileMetadata = require('./file-metadata')
+const MediaDimensions = require('./media-dimensions')
+const MediaCodec = require('./media-codec')
+const MediaFormat = require('./media-format')
+const MediaStream = require('./media-stream')
+const MediaMetadata = require('./media-metadata')
 
-export {
+module.exports = {
   FileMetadata,
   MediaDimensions,
   MediaCodec,

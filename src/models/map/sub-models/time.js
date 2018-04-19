@@ -1,5 +1,5 @@
-import SchemaObject from 'schema-object'
-import { BigNumber } from 'bignumber.js'
+const SchemaObject = require('schema-object')
+const { BigNumber } = require('bignumber.js')
 
 /**
  * Time
@@ -12,4 +12,4 @@ const Time = new SchemaObject({
   seconds: { type: BigNumber, default: BigNumber(0) }
 })
 
-export default Time
+module.exports = Time

@@ -1,24 +1,16 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+const SchemaObject = require('schema-object');
 
-var _schemaObject = require('schema-object');
+const { schema } = require('../../tag');
 
-var _schemaObject2 = _interopRequireDefault(_schemaObject);
-
-var _tag = require('../../tag');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Tag = new _schemaObject2.default(_tag.schema);
+const Tag = new SchemaObject(schema);
 
 /**
  * Media container format descriptor
  * @type {{new(values?: any): *}}
  */
-const MediaFormat = new _schemaObject2.default({
+const MediaFormat = new SchemaObject({
   tags: { type: [Tag] },
   bitRate: { type: Number },
   duration: { type: Number },
@@ -30,5 +22,4 @@ const MediaFormat = new _schemaObject2.default({
   startTime: { type: Number }
 });
 
-exports.default = MediaFormat;
-module.exports = exports['default'];
+module.exports = MediaFormat;

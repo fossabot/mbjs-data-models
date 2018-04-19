@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 /**
  * Plane coordinates
@@ -10,4 +10,4 @@ const Plane = new SchemaObject({
   height: { type: Number, default: 0 }
 })
 
-export default Plane
+module.exports = Plane

@@ -1,20 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _schemaObject = require('schema-object');
-
-var _schemaObject2 = _interopRequireDefault(_schemaObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const SchemaObject = require('schema-object');
 
 /**
  * Media dimensionality
  * @type {{new(values?: any): *}}
  */
-const MediaDimensions = new _schemaObject2.default({
+const MediaDimensions = new SchemaObject({
   width: { type: Number },
   height: { type: Number },
   codedWidth: { type: Number },
@@ -24,5 +16,4 @@ const MediaDimensions = new _schemaObject2.default({
   pixelFormat: { type: String }
 });
 
-exports.default = MediaDimensions;
-module.exports = exports['default'];
+module.exports = MediaDimensions;

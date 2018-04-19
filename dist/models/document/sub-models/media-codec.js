@@ -1,20 +1,12 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _schemaObject = require('schema-object');
-
-var _schemaObject2 = _interopRequireDefault(_schemaObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const SchemaObject = require('schema-object');
 
 /**
  * Media codec descriptor
  * @type {{new(values?: any): *}}
  */
-const MediaCodec = new _schemaObject2.default({
+const MediaCodec = new SchemaObject({
   name: { type: String },
   longName: { type: String },
   tag: { type: String },
@@ -26,5 +18,4 @@ const MediaCodec = new _schemaObject2.default({
   profile: { type: String }
 });
 
-exports.default = MediaCodec;
-module.exports = exports['default'];
+module.exports = MediaCodec;

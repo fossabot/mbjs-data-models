@@ -2,7 +2,7 @@ const validator = require('validator')
 
 const
   { tag } = require('../fixtures'),
-  { models } = require('../../dist'),
+  { models } = require('../../src'),
   { Tag } = models
 
 describe('Tag', () => {

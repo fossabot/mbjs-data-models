@@ -1,5 +1,5 @@
-import SchemaObject from 'schema-object'
-import Time from './time'
+const SchemaObject = require('schema-object')
+const Time = require('./time')
 
 /**
  * Timespan
@@ -9,4 +9,4 @@ const Timespan = new SchemaObject({
   end: { type: Time }
 })
 
-export default Timespan
+module.exports = Timespan

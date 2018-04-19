@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 /**
  * General file metadata
@@ -14,4 +14,4 @@ const FileMetadata = new SchemaObject({
   ext: { type: String }
 })
 
-export default FileMetadata
+module.exports = FileMetadata

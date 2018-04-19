@@ -1,36 +1,19 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fromIngestedMediaFile = undefined;
+const path = require('path');
 
-var _path = require('path');
-
-var _path2 = _interopRequireDefault(_path);
-
-var _assert = require('../../utils/assert');
-
-var _assert2 = _interopRequireDefault(_assert);
-
-var _object = require('../../utils/object');
-
-var _object2 = _interopRequireDefault(_object);
-
-var _time = require('../../utils/time');
-
-var _time2 = _interopRequireDefault(_time);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const Assert = require('../../utils/assert');
+const ObjectUtil = require('../../utils/object');
+const TimeUtil = require('../../utils/time');
 
 const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
-  _assert2.default.isType(file, 'object', 'file object missing');
-  _assert2.default.ok(file.hash && file.stats && file.ffprobe, 'invalid arguments');
+  Assert.isType(file, 'object', 'file object missing');
+  Assert.ok(file.hash && file.stats && file.ffprobe, 'invalid arguments');
 
   const { hash, stats, ffprobe } = file.meta,
         { format } = ffprobe,
         mediaStreams = ffprobe.streams || [],
-        uuid = _object2.default.uuid5(hash),
+        uuid = ObjectUtil.uuid5(hash),
         uri = `${baseURI}/${uuid}`;
 
   const payload = {
@@ -41,12 +24,12 @@ const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
     },
     file: {
       hash,
-      added: _time2.default.toISO(),
-      created: _time2.default.toISO(stats.birthtimeMs),
-      updated: _time2.default.toISO(stats.mtimeMs),
+      added: TimeUtil.toISO(),
+      created: TimeUtil.toISO(stats.birthtimeMs),
+      updated: TimeUtil.toISO(stats.mtimeMs),
       bytes: stats.size,
       mime: file.source.type,
-      ext: (_path2.default.extname(file.filename) || '.').substr(1)
+      ext: (path.extname(file.filename) || '.').substr(1)
     },
     media: {
       format: {
@@ -100,4 +83,6 @@ const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
   else return payload;
 };
 
-exports.fromIngestedMediaFile = fromIngestedMediaFile;
+module.exports = {
+  fromIngestedMediaFile
+};

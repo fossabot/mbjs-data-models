@@ -1,8 +1,7 @@
-import * as models from './models'
-import * as utils from './utils'
+const models = require('./models')
+const utils = require('./utils')
 
-export {
+module.exports = {
   models,
   utils
 }
-export default models

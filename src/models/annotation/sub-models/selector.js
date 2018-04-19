@@ -1,4 +1,4 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
 const Selector = new SchemaObject({
   type: { type: String, required: true },
@@ -6,4 +6,4 @@ const Selector = new SchemaObject({
   conformsTo: { type: String }
 })
 
-export default Selector
+module.exports = Selector

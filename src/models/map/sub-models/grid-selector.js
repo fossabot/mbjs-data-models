@@ -1,7 +1,7 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import Plane from './plane'
-import { MAP_SELECTOR_GRID } from '../../../constants'
+const Plane = require('./plane')
+const { MAP_SELECTOR_GRID } = require('../../../constants')
 
 /**
  * Time Selector
@@ -12,4 +12,4 @@ const GridSelector = new SchemaObject({
   selection: { type: Plane, required: true }
 })
 
-export default GridSelector
+module.exports = GridSelector

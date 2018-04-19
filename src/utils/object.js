@@ -1,10 +1,10 @@
-import slug from 'slug'
-import merge from 'deep-extend'
-import uuid4 from 'uuid/v4'
-import uuid5 from 'uuid/v5'
-import isUUID from 'validator/lib/isUUID'
+const slug = require('slug')
+const merge = require('deep-extend')
+const uuid4 = require('uuid/v4')
+const uuid5 = require('uuid/v5')
+const isUUID = require('validator/lib/isUUID')
 
-import Assert from './assert'
+const Assert = require('./assert')
 
 const
   NULL = '00000000-0000-0000-0000-000000000000',
@@ -60,9 +60,10 @@ class ObjectUtil {
   static uuid4 () {
     return uuid4()
   }
+
+  static get uuidNamespaces () {
+    return uuidNamespaces
+  }
 }
 
-export {
-  uuidNamespaces
-}
-export default ObjectUtil
+module.exports = ObjectUtil

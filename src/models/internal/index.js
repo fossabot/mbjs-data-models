@@ -1,5 +1,5 @@
-import Source from './source'
+const Source = require('./source')
 
-export {
+module.exports = {
   Source
 }

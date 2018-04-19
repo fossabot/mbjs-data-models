@@ -1,30 +1,17 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+const SchemaObject = require('schema-object');
 
-var _schemaObject = require('schema-object');
-
-var _schemaObject2 = _interopRequireDefault(_schemaObject);
-
-var _mediaDimensions = require('./media-dimensions');
-
-var _mediaDimensions2 = _interopRequireDefault(_mediaDimensions);
-
-var _mediaCodec = require('./media-codec');
-
-var _mediaCodec2 = _interopRequireDefault(_mediaCodec);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+const MediaDimensions = require('./media-dimensions');
+const MediaCodec = require('./media-codec');
 
 /**
  * Media stream descriptor
  * @type {{new(values?: any): *}}
  */
-const MediaStream = new _schemaObject2.default({
-  codec: { type: _mediaCodec2.default },
-  dimensions: { type: _mediaDimensions2.default },
+const MediaStream = new SchemaObject({
+  codec: { type: MediaCodec },
+  dimensions: { type: MediaDimensions },
   duration: { type: Number },
   durationTs: { type: Number },
   maxBitRate: { type: Number },
@@ -37,5 +24,4 @@ const MediaStream = new _schemaObject2.default({
   startTime: { type: Number }
 });
 
-exports.default = MediaStream;
-module.exports = exports['default'];
+module.exports = MediaStream;

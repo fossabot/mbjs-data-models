@@ -1,11 +1,11 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { constructors, computed, methods } from '../../defaults'
-import { fromIngestedMediaFile } from './converters'
-import { Source } from '../internal'
-import * as subModels from './sub-models'
+const { constructors, computed, methods } = require('../../defaults')
+const { fromIngestedMediaFile } = require('./converters')
+const { Source } = require('../internal')
+const subModels = require('./sub-models')
 
-import TimeUtil from '../../utils/time'
+const TimeUtil = require('../../utils/time')
 
 /**
  * Main Document Type
@@ -37,9 +37,6 @@ const config = {
 }
 
 const Document = new SchemaObject(schema, config)
+Document.schema = schema
 
-export {
-  schema,
-  config
-}
-export default Document
+module.exports = Document

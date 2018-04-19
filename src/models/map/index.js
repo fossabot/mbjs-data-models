@@ -1,12 +1,12 @@
-import SchemaObject from 'schema-object'
+const SchemaObject = require('schema-object')
 
-import { constructors, computed, methods } from '../../defaults'
-import { ObjectUtil } from '../../utils'
+const { constructors, computed, methods } = require('../../defaults')
+const { ObjectUtil } = require('../../utils')
 
-import {
+const {
   GridSelector,
   TimeSelector
-} from './sub-models'
+} = require('./sub-models')
 
 const schema = {
   uuid: { type: String, required: true },
@@ -36,9 +36,6 @@ const config = {
 }
 
 const Map = new SchemaObject(schema, config)
+Map.schema = schema
 
-export {
-  schema,
-  config
-}
-export default Map
+module.exports = Map
