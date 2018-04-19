@@ -3,7 +3,11 @@
   "productName": "mb.js data models",
   "version": "0.0.2",
   "description": "Motion Bank data models (JavaScript)",
-  "keywords": ["library", "module", "motionbank"],
+  "keywords": [
+    "library",
+    "module",
+    "motionbank"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
@@ -25,10 +29,10 @@
       "travis"
     ],
     "codacy": {
-      "hash": "caea2d3c263b447f83818c6ed4ca3609"
+      "hash": "9cb9c9fd551f4dd6a47d70876abf7a43"
     },
     "codeclimate": {
-      "hash": "844037436b98a1e19e71"
+      "hash": "19f9c8c384726f86d856"
     }
   },
   "repository": {
