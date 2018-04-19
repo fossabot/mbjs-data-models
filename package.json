@@ -1,7 +1,9 @@
 {
-  "name": "motionbank-data-models",
+  "name": "mbjs-data-models",
+  "productName": "mb.js data models",
   "version": "0.0.2",
-  "description": "Data model library for Motion Bank",
+  "description": "Motion Bank data models (JavaScript)",
+  "keywords": ["library", "module", "motionbank"],
   "main": "dist/index.js",
   "scripts": {
     "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
@@ -31,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/motionbank-js/motionbank-data-models.git"
+    "url": "git+https://github.com/motionbank-js/mbjs-data-models.git"
   },
   "author": "Mainz University of Applied Sciences (Motion Bank Project)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/motionbank-js/motionbank-data-models/issues"
+    "url": "https://github.com/motionbank-js/mbjs-data-models/issues"
   },
-  "homepage": "https://github.com/motionbank-js/motionbank-data-models#readme",
+  "homepage": "https://github.com/motionbank-js/mbjs-data-models#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
