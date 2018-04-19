@@ -1,7 +1,7 @@
 const SchemaObject = require('schema-object')
 
 const { constructors, computed, methods } = require('../defaults')
-const { ObjectUtil } = require('../utils')
+const { ObjectUtil } = require('mbjs-utils')
 
 const schema = {
   title: { type: String, required: true },

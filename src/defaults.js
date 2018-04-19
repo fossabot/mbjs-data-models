@@ -1,8 +1,7 @@
-const isUUID = require('validator/lib/isUUID')
-
-const ObjectUtil = require('./utils/object')
-const { uuidNamespaces } = require('./utils/object')
-const TimeUtil = require('./utils/time')
+const
+  isUUID = require('validator/lib/isUUID'),
+  { ObjectUtil, TimeUtil } = require('mbjs-utils'),
+  { uuidNamespaces } = ObjectUtil
 
 /**
  * Default constructor

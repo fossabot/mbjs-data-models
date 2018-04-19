@@ -1,15 +1,11 @@
 const
   Chance = require('chance'),
   chance = new Chance(),
-  uuidv4 = require('uuid/v4')
-
-const
-  { utils } = require('../src'),
-  { TimeUtil } = utils
+  { TimeUtil, ObjectUtil } = require('mbjs-utils')
 
 const singleValues = {
   uuid () {
-    return uuidv4()
+    return ObjectUtil.uuid4()
   },
   bytesSize () {
     return chance.integer({

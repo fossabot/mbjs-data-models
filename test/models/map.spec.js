@@ -2,8 +2,7 @@ const validator = require('validator')
 
 const
   { map } = require('../fixtures'),
-  { models } = require('../../src'),
-  { Map } = models
+  { Map } = require('../../src')
 
 describe('Map', () => {
   it('creates a Map instance from random values', () => {

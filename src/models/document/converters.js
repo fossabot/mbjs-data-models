@@ -1,8 +1,6 @@
-const path = require('path')
-
-const Assert = require('../../utils/assert')
-const ObjectUtil = require('../../utils/object')
-const TimeUtil = require('../../utils/time')
+const
+  path = require('path'),
+  { Assert, ObjectUtil, TimeUtil } = require('mbjs-utils')
 
 const fromIngestedMediaFile = function (file, baseURI = 'http://127.0.0.1') {
   Assert.isType(file, 'object', 'file object missing')

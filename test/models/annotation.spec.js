@@ -2,8 +2,7 @@ const validator = require('validator')
 
 const
   { annotation } = require('../fixtures'),
-  { models } = require('../../src'),
-  { Annotation } = models
+  { Annotation } = require('../../src')
 
 describe('Annotation', () => {
   it('creates an Annotation instance from random values', () => {

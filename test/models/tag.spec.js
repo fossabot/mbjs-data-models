@@ -2,8 +2,7 @@ const validator = require('validator')
 
 const
   { tag } = require('../fixtures'),
-  { models } = require('../../src'),
-  { Tag } = models
+  { Tag } = require('../../src')
 
 describe('Tag', () => {
   it('creates an empty Tag instance', () => {

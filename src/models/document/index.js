@@ -1,11 +1,11 @@
-const SchemaObject = require('schema-object')
+const
+  SchemaObject = require('schema-object'),
+  { TimeUtil } = require('mbjs-utils')
 
 const { constructors, computed, methods } = require('../../defaults')
 const { fromIngestedMediaFile } = require('./converters')
 const { Source } = require('../internal')
 const subModels = require('./sub-models')
-
-const TimeUtil = require('../../utils/time')
 
 /**
  * Main Document Type

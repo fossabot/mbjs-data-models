@@ -1,9 +1,10 @@
-const validator = require('validator')
+const
+  validator = require('validator'),
+  utils = require('mbjs-utils')
 
 const
   { document } = require('../fixtures'),
-  { models, utils } = require('../../src'),
-  { Document } = models,
+  { Document } = require('../../src'),
   { TimeUtil, Assert } = utils
 
 describe('Document', () => {
