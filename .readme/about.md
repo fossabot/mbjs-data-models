@@ -9,7 +9,7 @@ npm i --save motionbank-data-models
 ... then you include :fire: ...
 
 ```javascript
-const models = require('motionbank-data-models')
+const models = require('mbjs-data-models')
 ```
 
 ... then you get the :neckbeard:.
@@ -198,8 +198,4 @@ const
 
 Watch your changes while working :dizzy: with `npm run watch`.
 And don't forget to always `npm run lint` and `npm test`
-before you commit.
-
-## Build
-
-Make a clean and fresh production build with `npm run dist`, then get ready to :bomb:.
+before you :bomb: a commit.
