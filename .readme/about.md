@@ -3,7 +3,7 @@
 First you :floppy_disk: install...
 
 ```shell
-npm i --save motionbank-data-models
+npm i --save mbjs-data-models
 ```
 
 ... then you include :fire: ...
@@ -196,8 +196,7 @@ const
 
 ## Develop
 
-Watch your changes while working :dizzy: with `npm run watch`.
-And don't forget to always `npm run lint` and `npm test`
+Don't forget to always `npm run lint` and `npm test`
 before you :bomb: a commit.
 
 ## Stability

@@ -10,17 +10,12 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "babel": "cross-env NODE_ENV=production babel --copy-files src --out-dir dist",
-    "clean": "rimraf dist",
-    "dist": "npm run lint && npm run clean && npm run babel && npm run metapak",
     "lint": "eslint src/. --config .eslintrc.js",
     "metapak": "metapak",
-    "test": "cross-env NODE_ENV=test mocha -r test/helper --reporter=nyan --recursive test",
-    "watch": "cross-env NODE_ENV=production babel --watch --copy-files src --out-dir dist"
+    "test": "mocha -r test/helper --reporter=nyan --recursive test"
   },
   "metapak": {
     "configs": [
-      "babel",
       "eslint",
       "readme",
       "codeclimate",
@@ -46,15 +41,8 @@
   },
   "homepage": "https://github.com/motionbank-js/mbjs-data-models#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.3",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
-    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "chance": "^1.0.13",
-    "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -63,13 +51,12 @@
     "eslint-plugin-standard": "^3.0.1",
     "metapak": "^1.0.3",
     "metapak-motionbank": "^1.10.2",
-    "mocha": "^5.1.0",
-    "rimraf": "^2.6.2"
+    "mocha": "^5.1.0"
   },
   "dependencies": {
     "bignumber.js": "^6.0.0",
     "bluebird": "^3.5.1",
-    "mbjs-utils": "0.0.1",
+    "mbjs-utils": "^0.0.1",
     "schema-object": "^4.0.11",
     "slug": "^0.9.1",
     "validator": "^9.4.1"
