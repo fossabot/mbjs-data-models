@@ -7,7 +7,8 @@
 [![NPM version](https://badge.fury.io/js/mbjs-data-models.svg)](https://npmjs.org/package/mbjs-data-models)
 [![Build status](https://secure.travis-ci.org/motionbank-js/mbjs-data-models.svg)](https://travis-ci.org/motionbank-js/mbjs-data-models)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9cb9c9fd551f4dd6a47d70876abf7a43)](https://www.codacy.com/app/motionbank-js/mbjs-data-models)
-[![Maintainability](https://api.codeclimate.com/v1/badges/19f9c8c384726f86d856/maintainability)](https://codeclimate.com/github/motionbank-js/mbjs-data-models)
+[![Coverage Status](https://coveralls.io/repos/github/motionbank-js/mbjs-data-models/badge.svg?branch=master)](https://coveralls.io/github/motionbank-js/mbjs-data-models?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/19f9c8c384726f86d856/maintainability)](https://codeclimate.com/github/motionbank-js/mbjs-data-models/maintainability)
 [![Dependency Status](https://tidelift.com/badges/github/motionbank-js/mbjs-data-models?style=flat)](https://tidelift.com/repo/github/motionbank-js/mbjs-data-models)
 
 
