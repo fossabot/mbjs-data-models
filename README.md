@@ -2,6 +2,8 @@
 [comment]: # (To edit its contents please refer to the project dir '.readme')
 
 # MB.js Data Models
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/motionbank-js/mbjs-data-models.svg)](https://greenkeeper.io/)
 > Motion Bank data models (JavaScript)
 
 [![NPM version](https://badge.fury.io/js/mbjs-data-models.svg)](https://npmjs.org/package/mbjs-data-models)
