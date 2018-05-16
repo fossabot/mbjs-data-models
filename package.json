@@ -66,7 +66,7 @@
   "dependencies": {
     "bignumber.js": "^6.0.0",
     "bluebird": "^3.5.1",
-    "mbjs-utils": "^0.0.4",
+    "mbjs-utils": "^0.0.5",
     "schema-object": "^4.0.11",
     "slug": "^0.9.1",
     "validator": "^9.4.1"
